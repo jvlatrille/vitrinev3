@@ -44,35 +44,34 @@ nav ul li a:hover {
 }
 
 body, html {
-    height: 300vh; /* Permet le défilement sur 3 "écrans" pour 3 sections */
-    overflow-x: hidden; /* Empêche le défilement horizontal par défaut */
+    height: 500vh; /* Ajuste pour 5 sections */
+    overflow-x: hidden;
     background-color: #000; /* Fond noir pour toute la page */
 }
 
 main {
-    margin-top: 80px; /* On décale le contenu sous le header plus grand */
+    margin-top: 80px;
     display: flex;
-    width: 240vw; /* Toujours 3 sections à 100vw */
-    height: 100vh; /* Pleine hauteur de l'écran */
-    position: fixed; /* Fixé pour qu'il suive le scroll */
+    width: 500vw; /* Ajuste pour 5 sections */
+    height: 100vh;
+    position: fixed;
     top: 0;
     left: 0;
-    transition: transform 0.5s ease; /* Transition douce */
+    transition: transform 0.5s ease;
 }
 
 .section {
-    width: 50vw; /* Légèrement plus petit que 50vw */
-    height: 50vh; /* Légèrement plus petit que 50vh */
-    margin: auto; /* Centre les sections horizontalement et verticalement */
-    margin-top: 100px; /* Déplace les sections légèrement vers le haut */
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     color: white;
-    border-radius: 10px; /* Coins arrondis pour les sections */
+    border-radius: 10px;
 }
-
 
 #accueil {
     background-color: #3498db;
@@ -84,4 +83,12 @@ main {
 
 #competences {
     background-color: #e74c3c;
+}
+
+#portfolio {
+    background-color: #9b59b6;
+}
+
+#contact {
+    background-color: #f39c12;
 }
