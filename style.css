@@ -71,7 +71,10 @@ main {
     align-items: center;
     font-size: 2rem;
     color: white;
-    border-radius: 10px;
+    border-radius: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -80,23 +83,7 @@ main {
 /* ---------------------------- */
 
 #accueil {
-    background-color: #3498db;
-}
-
-/* Garder les dimensions de la section inchangées */
-.section {
-    position: absolute;
-    width: 50vw;
-    height: 50vh;
-    margin: auto;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
-    border-radius: 10px;
-    background-color: inherit; /* Conserve la couleur de fond définie par section */
+    background-image: url('img/accueil.png');
 }
 
 /* Contenu centré dans la section */
@@ -141,7 +128,7 @@ main {
 /* ---------------------------- */
 
 #profil {
-    background-color: #2ecc71;
+    background-image: url('img/profil.jpg');
 }
 
 
@@ -150,7 +137,7 @@ main {
 /* ---------------------------- */
 
 #competences {
-    background-color: #e74c3c;
+    background-image: url('img/competences.jpg');
 }
 
 /* ---------------------------- */
@@ -158,7 +145,7 @@ main {
 /* ---------------------------- */
 
 #portfolio {
-    background-color: #9b59b6;
+    background-image: url('img/portfolio.jpg');
 }
 
 /* ---------------------------- */
@@ -166,6 +153,5 @@ main {
 /* ---------------------------- */
 
 #contact {
-    background-color: #f39c12;
+    background-image: url('img/meContacter.jpg');
 }
-
