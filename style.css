@@ -1,3 +1,42 @@
+/* Nouveau style pour le header, avec une taille plus grande */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px; /* Hauteur augmentée */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond transparent */
+    z-index: 1000; /* Par-dessus le reste */
+}
+
+header .logo img {
+    height: 60px; /* Taille du logo ajustée pour correspondre à la hauteur du header */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 30px; /* Plus d'espacement entre les liens */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem; /* Augmente la taille des liens */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Couleur de survol */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,8 +50,9 @@ body, html {
 }
 
 main {
+    margin-top: 80px; /* On décale le contenu sous le header plus grand */
     display: flex;
-    width: 240vw; /* Réduit la largeur totale pour rapprocher encore plus les sections */
+    width: 240vw; /* Toujours 3 sections à 100vw */
     height: 100vh; /* Pleine hauteur de l'écran */
     position: fixed; /* Fixé pour qu'il suive le scroll */
     top: 0;
@@ -21,9 +61,10 @@ main {
 }
 
 .section {
-    width: 45vw; /* Légèrement plus petit que 50vw */
-    height: 45vh; /* Légèrement plus petit que 50vh */
+    width: 50vw; /* Légèrement plus petit que 50vw */
+    height: 50vh; /* Légèrement plus petit que 50vh */
     margin: auto; /* Centre les sections horizontalement et verticalement */
+    margin-top: 100px; /* Déplace les sections légèrement vers le haut */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,14 +73,15 @@ main {
     border-radius: 10px; /* Coins arrondis pour les sections */
 }
 
-#section1 {
+
+#accueil {
     background-color: #3498db;
 }
 
-#section2 {
+#profil {
     background-color: #2ecc71;
 }
 
-#section3 {
+#competences {
     background-color: #e74c3c;
 }
