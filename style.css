@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 300vh; /* Permet le défilement sur 3 "écrans" pour 3 sections */
+    overflow-x: hidden; /* Empêche le défilement horizontal par défaut */
+    background-color: #000; /* Fond noir pour toute la page */
+}
+
+main {
+    display: flex;
+    width: 240vw; /* Réduit la largeur totale pour rapprocher encore plus les sections */
+    height: 100vh; /* Pleine hauteur de l'écran */
+    position: fixed; /* Fixé pour qu'il suive le scroll */
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease; /* Transition douce */
+}
+
+.section {
+    width: 45vw; /* Légèrement plus petit que 50vw */
+    height: 45vh; /* Légèrement plus petit que 50vh */
+    margin: auto; /* Centre les sections horizontalement et verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    border-radius: 10px; /* Coins arrondis pour les sections */
+}
+
+#section1 {
+    background-color: #3498db;
+}
+
+#section2 {
+    background-color: #2ecc71;
+}
+
+#section3 {
+    background-color: #e74c3c;
+}
