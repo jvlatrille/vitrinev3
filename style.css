@@ -71,11 +71,40 @@ main {
     align-items: center;
     font-size: 2rem;
     color: white;
-    border-radius: 40px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-size: contain; /* L'image sera entièrement affichée */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    perspective: 2000px; /* Ajoute de la profondeur pour l'effet 3D */
 }
+
+/* Style de base pour les titres avec effet 3D */
+h2, h3, p {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+/* Effet 3D pour tous les titres dans toutes les sections */
+.section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+.section p {
+    font-size: 1.2rem;
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+
 
 
 /* ---------------------------- */
@@ -98,26 +127,22 @@ main {
 
 /* Nom centré */
 .header-accueil .name {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 10px;
     color: white;
+    transition: transform 0.5s ease;
 }
 
-/* Sous-titre centré */
 .header-accueil .subtitle {
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+.header-accueil .description {
     font-size: 1.2rem;
     color: white;
-    margin-bottom: 20px;
-}
-
-/* Texte descriptif */
-.header-accueil .description {
-    font-size: 1rem;
-    color: white;
-    max-width: 90%; /* Limite la largeur du texte */
-    margin: 0 auto;
-    padding: 10px;
+    transition: transform 0.5s ease;
 }
 
 

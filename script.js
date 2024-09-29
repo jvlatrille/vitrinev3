@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
     const sections = document.querySelectorAll('.section');
     const main = document.querySelector('main');
-    const scrollThreshold = sections.length * 100 * window.innerHeight; // Total scroll distance en pixels (vh * hauteur de la fenêtre)
+    const scrollThreshold = sections.length * 100 * window.innerHeight;
 
     // Positionner les sections
     sections.forEach((section, index) => {
@@ -10,8 +10,7 @@ window.addEventListener('load', function () {
         if (index === 0) {
             topPosition = 0;
             leftPosition = 25;
-        }
-        else {
+        } else {
             topPosition = -index * 100 + 25;
             leftPosition = index * 100;
         }
@@ -20,33 +19,22 @@ window.addEventListener('load', function () {
         section.style.left = `${leftPosition}vw`;
     });
 
+    // Effet 3D pour tous les titres en fonction de la souris
+    window.addEventListener('mousemove', function (e) {
+        const xPos = (e.clientX / window.innerWidth - 0.5) * 60; // Augmenter l'effet de rotation sur l'axe X
+        const yPos = (e.clientY / window.innerHeight - 0.5) * 60; // Augmenter l'effet de rotation sur l'axe Y
+
+        // Appliquer l'effet 3D à tous les titres des sections
+        document.querySelectorAll('.section h2, .section h3, .section p').forEach(title => {
+            title.style.transform = `rotateY(${xPos}deg) rotateX(${yPos}deg)`; // Rotation plus prononcée
+        });
+    });
+
     window.addEventListener('scroll', function () {
         let scrollTop = window.pageYOffset;
         let windowHeight = window.innerHeight;
 
         // Appliquer la transformation diagonale
         main.style.transform = `translate(${-scrollTop / windowHeight * 100}vw, ${scrollTop / windowHeight * 100}vh)`;
-    });
-});
-
-// Fonction pour rediriger vers une section spécifique lors du clic sur un lien (défilement diagonal)
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href').substring(1); // Récupère l'ID de la section
-        const targetSection = document.getElementById(targetId);
-
-        const sections = Array.from(document.querySelectorAll('main .section'));
-        const index = sections.indexOf(targetSection); // Trouve l'index de la section cible
-
-        let container = document.querySelector('main');
-
-        // Calculer le défilement en diagonale
-        const targetTop = index * 100 - 25; // Décalage vertical de 100vh par section
-        const targetLeft = index * 100 - 25; // Décalage horizontal de 100vw par section
-
-        // Appliquer le défilement en diagonale vers la section cible
-        container.style.transform = `translate(${-targetLeft}vw, ${targetTop}vh)`;
     });
 });
