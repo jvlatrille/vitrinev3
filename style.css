@@ -83,6 +83,58 @@ main {
     background-color: #3498db;
 }
 
+/* Garder les dimensions de la section inchangées */
+.section {
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    border-radius: 10px;
+    background-color: inherit; /* Conserve la couleur de fond définie par section */
+}
+
+/* Contenu centré dans la section */
+.header-accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Prend la largeur de la section */
+}
+
+/* Nom centré */
+.header-accueil .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Sous-titre centré */
+.header-accueil .subtitle {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Texte descriptif */
+.header-accueil .description {
+    font-size: 1rem;
+    color: white;
+    max-width: 90%; /* Limite la largeur du texte */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+
 
 /* ---------------------------- */
 /*           PROFIL             */
