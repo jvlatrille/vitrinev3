@@ -52,12 +52,12 @@ body, html {
 main {
     margin-top: 80px;
     display: flex;
-    width: 500vw; /* Ajuste pour 5 sections */
-    height: 100vh;
-    position: fixed;
+    width: 500vw; /* Ajuste pour 5 sections, chaque section occupe 100vw */
+    height: 100vh; /* Hauteur de la fenêtre pour chaque section */
+    position: fixed; /* Garde les sections fixes pour l'effet de défilement horizontal */
     top: 0;
     left: 0;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; /* Transition douce pour les déplacements */
 }
 
 .section {
@@ -72,11 +72,11 @@ main {
     font-size: 2rem;
     color: white;
     border-radius: 10px;
-    background-size: contain; /* L'image sera entièrement affichée */
-    background-position: center; /* Centrer l'image */
-    background-repeat: no-repeat; /* Ne pas répéter l'image */
-    perspective: 2000px; /* Ajoute de la profondeur pour l'effet 3D */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 /* Style de base pour les titres avec effet 3D */
 h2, h3, p {
