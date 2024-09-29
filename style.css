@@ -61,6 +61,7 @@ main {
 }
 
 .section {
+    position: absolute;
     width: 50vw;
     height: 50vh;
     margin: auto;
