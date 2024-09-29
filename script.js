@@ -10,7 +10,8 @@ window.addEventListener('load', function () {
         if (index === 0) {
             topPosition = 0;
             leftPosition = 25;
-        } else {
+        }
+        else {
             topPosition = -index * 100 + 25;
             leftPosition = index * 100;
         }
