@@ -115,38 +115,6 @@ h2, h3, p {
     background-image: url('img/accueil.png');
 }
 
-/* Contenu centré dans la section */
-.header-accueil {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%; /* Prend la largeur de la section */
-}
-
-/* Nom centré */
-.header-accueil .name {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    transition: transform 0.5s ease;
-}
-
-.header-accueil .subtitle {
-    font-size: 1.5rem;
-    color: white;
-    transition: transform 0.5s ease;
-}
-
-.header-accueil .description {
-    font-size: 1.2rem;
-    color: white;
-    transition: transform 0.5s ease;
-}
-
-
-
 
 /* ---------------------------- */
 /*           PROFIL             */
@@ -158,9 +126,8 @@ h2, h3, p {
 
 
 /* ---------------------------- */
-/*         COMPETENCES          */
+/*           COMPETENCES         */
 /* ---------------------------- */
-
 #competences {
     background-image: url('img/competences.jpg');
 }
