@@ -82,6 +82,7 @@ main {
 h2, h3, p {
     transform-style: preserve-3d;
     transition: transform 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Effet 3D pour tous les titres dans toutes les sections */
